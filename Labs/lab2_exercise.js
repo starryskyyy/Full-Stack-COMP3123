@@ -63,6 +63,27 @@ console.log(filterLessThan20)
 
 /************** Exercise 5 **************/
 
+// Using array.proto.reduce create calculate the sum and product of a given array
+
+var array = [1, 2, 3, 4];
+
+function sum(result, num) {
+    return result + num;
+}
+
+function product(result, num) {
+    return result * num;
+}
+
+let calculateSum = array.reduce(sum)
+let calculateProduct = array.reduce(product)
+
+console.log("\n**** Exercise 5 ****\n")
+console.log(calculateSum)
+console.log(calculateProduct)
+
+/************** Exercise 6 **************/
+
 //Using ES6 syntax for class and subclass using extends to create a Sedan subclass which derives 
 //from Car Class. The parameters for the Car class is the model and year. The parameters for the 
 //subclass is the model, year and balance.
@@ -91,7 +112,7 @@ class Sedan extends Car {
     }
 }
 
-console.log("\n**** Exercise 4 ****\n")
+console.log("\n**** Exercise 6 ****\n")
 
 const car1 = new Car('Pontiac Firebird', 1976)
 console.log(car1.details())
