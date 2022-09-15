@@ -69,3 +69,32 @@ console.log(filterLessThan20)
 //Use the super key word in the Sedan subclass to set the model and name in base Car 
 //constructor
 
+class Car {
+    constructor(model, year) {
+        this.model = model
+        this.year = year
+    }
+    details() {
+        return `Model: ${this.model} Engine ${this.year}`
+    }
+}
+
+class Sedan extends Car {
+    constructor(model, year, balance) {
+        // passing the parameters of the parent class
+        // plus the parameter balance
+        super(model, year)
+        this.balance = balance
+    }
+    info() {
+        return `${this.model} has a balance of $${(Math.round(this.balance * 100) / 100).toFixed(2)}`;
+    }
+}
+
+console.log("\n**** Exercise 4 ****\n")
+
+const car1 = new Car('Pontiac Firebird', 1976)
+console.log(car1.details())
+
+const sedan = new Sedan('Volvo SD', 2018, 30000)
+console.log(sedan.info())
