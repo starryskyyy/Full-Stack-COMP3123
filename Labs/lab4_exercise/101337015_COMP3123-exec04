@@ -1,0 +1,28 @@
+const express = require("express")
+
+const app = express()
+
+const SERVER_PORT = 8088;
+
+// Display message 
+app.get("/hello", (req, res) => {
+    res.send("<h1>Hello Express JS")
+})
+
+// Query Parameter
+app.get("/user", (req, res) => {
+    res.send(JSON.stringify(req.query))
+})
+
+// Path Parameter
+app.post("/user/:fnm/:lnm", (req, res) => {
+    res.status(201).json({ 
+        first_name: req.params.fnm,
+        last_name: req.params.lnm
+    });
+
+})
+
+app.listen(SERVER_PORT, () => {
+    console.log(`Server started at http://localhost:${SERVER_PORT}`)
+})

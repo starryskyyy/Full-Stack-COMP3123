@@ -1,0 +1,24 @@
+{
+  "name": "lab4_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "101337015_COMP3123-exec04.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node 101337015_COMP3123-exec04.js",
+    "dev": "nodemon 101337015_COMP3123-exec04.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "web"
+  ],
+  "author": "Elizaveta Vygovskaia",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
